@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Query Parameter Retrieval</title>
+  <script>
+    // Retrieve query parameters from URL
+    function getQueryParams() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const firstname = urlParams.get('firstname');
+      const lastname = urlParams.get('lastname');
+      const room = urlParams.get('room');
+      
+      // Display values on the page
+      document.getElementById('firstname').textContent = firstname;
+      document.getElementById('lastname').textContent = lastname;
+      document.getElementById('room').textContent = room;
+    }
+  </script>
+</head>
+<body onload="getQueryParams()">
+  <h1>Query Parameter Retrieval</h1>
+  <p>First Name: <span id="firstname"></span></p>
+  <p>Last Name: <span id="lastname"></span></p>
+  <p>Room: <span id="room"></span></p>
+</body>
+</html>
